@@ -2,11 +2,11 @@ import mongoose from 'mongoose';
 
 const fileSchema=new mongoose.Schema({
     path:{
-        type:String,
+        type: String,
         required:true
     },
     name:{
-        type:String,
+        type: String,
         required:true
     },
     downloadContent:{

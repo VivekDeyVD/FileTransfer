@@ -18,12 +18,15 @@ function App() {
 
       let response= await uploadFile(data);
       setResult(response.path);
+
       }
     }
+    getImage();
   },[file])
   const onUploadClick=()=>{
     fileinputRef.current.click();
   }
+  console.log(file);
   return (
     <div className="App">
    <img src={logo} className="App-logo" alt="logo" />

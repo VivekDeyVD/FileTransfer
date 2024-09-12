@@ -1,4 +1,4 @@
-import file from '../models/file.js';
+import File from '../models/file.js';
 export const uploadImage=async (request,response)=>{
     const fileObj={
         path:request.file.path,
@@ -23,7 +23,7 @@ export const downloadImage=async (request,response)=>{
         await file.save();
         response.download(file.path,file.name);
     }catch(error){
-        console.error('error',error.message);
+        console.error(error.message);
         return response.status(500).json({error:error.message});
     }
 }
